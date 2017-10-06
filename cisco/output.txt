@@ -1,0 +1,16 @@
+
+R3>show ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            192.168.0.55    YES NVRAM  up                    up      
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down    
+FastEthernet1/0            unassigned      YES NVRAM  administratively down down    
+FastEthernet2/0            unassigned      YES NVRAM  administratively down down    
+R3>
+cisco>show ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.0.100   YES NVRAM  up                    up      
+GigabitEthernet2       10.0.0.1        YES NVRAM  up                    up      
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet4       unassigned      YES NVRAM  administratively down down    
+Loopback0              1.1.1.1         YES NVRAM  up                    up      
+cisco>

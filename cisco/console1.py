@@ -1,4 +1,4 @@
-import serial
+babnscoconimport serial
 import time
 import getpass
 
@@ -21,8 +21,8 @@ while True:
 	if console.inWaiting() == 1:
 		print "recovery password is starting"
 	if console.inWaiting() > 0:
-		read_data = console.read(console.inWaiting())
 		time.sleep(1)
+		read_data = console.read(console.inWaiting())
 		if '####' in read_data:
 			print '\n\n\n\nentering rommon mode'
 			time.sleep(1)
@@ -33,9 +33,9 @@ time.sleep(1)
 console.write("confreg 0x2142\nreset\n")
 
 while True:
-	if console.inWaiting > 0:
-		read_data = console.read(console.inWaiting())
+	if console.inWaiting() > 0:
 		time.sleep(1)
+		read_data = console.read(console.inWaiting())
 		if "Would you like" in read_data:
 			console.write("no\n")
 			break

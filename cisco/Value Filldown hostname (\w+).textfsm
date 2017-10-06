@@ -1,0 +1,9 @@
+Value Filldown hostname (\w+)
+Value interface (.+)
+Value ip (\d+/.\d+/.\d+/.\d+)
+Value status (/w+/s/w+)
+Value protocol (/w+)
+
+Start
+  ^${hostname}[>#].*
+  ^${interface}/s+${ip}.*${status}/s+${protocol} -> Record

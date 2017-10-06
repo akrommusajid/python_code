@@ -1,0 +1,12 @@
+Value Filldown hostname (\S+)
+Value Type (.+) 
+Value Description (.*) 
+Value PID (\S*) 
+Value VID (\S*) 
+Value SN (\S*) 
+ 
+Start 
+  ^${hostname}[>#].* 
+  ^NAME: "${Type}", DESCR: "${Description}" 
+  ^PID: ${PID}.*VID: ${VID}.*SN: ${SN} -> Record
+ 
